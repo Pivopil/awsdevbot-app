@@ -26,6 +26,6 @@ module "acm" {
     "*.ecs.${var.public_subdomain}"
   ]
   tags = merge(module.tags, {
-    Name = "${var.prefix}:${var.public_subdomain}:${acm}"
+    Name = "${var.prefix}:${var.public_subdomain}:acm"
   })
 }
