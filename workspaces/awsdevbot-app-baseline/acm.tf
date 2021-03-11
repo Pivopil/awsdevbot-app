@@ -3,6 +3,13 @@ data "aws_route53_zone" "public" {
   private_zone = false
 }
 
+module "tags" {
+  // git::https://github.com/Pivopil/awsdevbot-app.git//modules/tags?ref=main
+  source = "../../modules/tags"
+  prefix = var.prefix
+}
+
+
 module "acm" {
   source  = "terraform-aws-modules/acm/aws"
   version = "2.12.0"
@@ -18,7 +25,7 @@ module "acm" {
     "ecs.${var.public_subdomain}",
     "*.ecs.${var.public_subdomain}"
   ]
-  tags = {
-    Name = var.public_subdomain
-  }
+  tags = merge(module.tags, {
+    Name = "${var.prefix}:${var.public_subdomain}:${acm}"
+  })
 }
