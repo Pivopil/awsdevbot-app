@@ -74,20 +74,21 @@ controls are in place, patch compliance is up to date, and so on.)
 
 
 1) cosnle org and resource groups
-        var.app_env_name                 "app:env" -> "dev'
-        var.app_env_version             "app:env:version" // https://semver.org
+        var.app_env_name                 "app:env" -> "dev"
+        var.app_env_version             "app:env:version" -> "0.0.1" // https://semver.org
 
-        var.app_env_component_name      app:component:name 
+        // component = org = root public domain
+        var.app_env_component_name      "app:component:name" -> "awsdevbot.com" 
+        
+        // org, env, app
 
-        var.app_env_component_version   app:component:version  // https://semver.org
-        var.support_email  (contact email) 
+        var.app_env_component_version   "app:component:version" -> "0.0.1"  // https://semver.org
+        var.support_email  (contact email) "john.smith@anycompany.com"
 
 
 
-         anycompany:business-contact = John
-Smith;john.smith@anycompany.com;+12015551212
-anycompany:technical-contact = Susan
-Jones;sue.jones@anycompany.com;+12015551213
+awsdevbot:business-contact = Alex Smith;john.smith@anycompany.com;+12015551212
+awsdevbot:technical-contact = Susan Jones;sue.jones@anycompany.com;+12015551213
 
 Single Tag Values
 anycompany:business-contact-name = John Smith
