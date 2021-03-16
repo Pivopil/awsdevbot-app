@@ -1,32 +1,3 @@
-====================================
-
-ECS app
-
-1 
-+ UAT (305631072082) -> 
-+ module: VPC, SG, ECS cluster
-- Tagging
-2 UAT -> 
-+/- CI CD pipeline for the ECS app 
-(https://github.com/aws-samples/building-java-apps-using-code-pipeline)
-
-3 SSM ec2 Bastion host, Tag Acls Policy limitations, Export logs to the externall acc, SSM
-(https://github.com/awslabs/aws-data-lake-solution)
-
-Serverless app
-
-====================================
-
-4 VPC, SG, Tagging
-5 API Gateway custom auth, S3 Proxy, 
-6 Step function with callback, Export logs to the externall acc
-
-https://github.com/aws-samples/amazon-rekognition-video-analyzer
-https://github.com/aws-samples/lambda-refarch-imagerecognition
-https://github.com/aws-samples/aws-xray-rekognition-lambda-sample
-https://github.com/aws-samples/amazon-rekognition-custom-labels-demo
-
-
 ============
 
 Tagging
